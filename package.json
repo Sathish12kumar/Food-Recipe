@@ -5,13 +5,11 @@
   "type": "module",
   "homepage": "https://yourusername.github.io/Food-Recipe",
   "scripts": {
-    "scripts": {
-      "dev": "vite",
-      "build": "react-scripts build"
-      "preview": "vite preview",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d dist"
-    }
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
