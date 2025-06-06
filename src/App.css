@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ewert&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Noto Serif", serif;
+}
+.fullPrg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.top {
+  height: 50dvh;
+  width: 100%;
+  background: #ed0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  color: #feaa00;
+  font-family: "Rye", serif;
+  /* font-family: "Ewert", serif; */
+}
+.ipt {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #fde4ce;
+  border-radius: 10px;
+  width: max-content;
+  width: 60%;
+  height: 70px;
+}
+@media (max-width: 500px) {
+  .ipt {
+    width: 80%;
+  }
+}
+.ipt input {
+  height: 100%;
+  width: 90%;
+  flex-grow: 1;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  color: #feaa00;
+}
+.ipt input::placeholder {
+  color: #feaa00;
+}
+.ipt button {
+  padding: 8px 12px;
+  height: 100%;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: #feaa00;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.ipt button:hover {
+  background: #feaa00;
+  color: white;
+}
+.result {
+  width: 100%;
+  padding: 20px;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.result .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gray;
+  z-index: -2;
+  font-size: 80px;
+}
+.result .total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.result .load {
+  text-align: center;
+  font-size: 45px;
+  color: gray;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.errorclass {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid;
+  width: max-content;
+  position: relative;
+  background: black;
+  width: 100%;
+}
+.errorclass img {
+  object-fit: center;
+  height: 350px;
+}
+.errorclass .num {
+  font-size: 35px;
+  font-weight: 800;
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #ed0000;
+  padding: 6px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.items .name {
+  font-size: 22px;
+  margin: 5px 0;
+  text-align: center;
+}
+.items img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.items button {
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 19px;
+  border: transparent;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background: #feaa00;
+  color: white;
+}
+.items:hover {
+  transform: translateY(-10px);
+  scale: 1.02;
+  box-shadow: 6px 8px 2px #fa9d83;
+}
+.items button:hover {
+  background: rgba(0, 128, 0, 0.895);
+}
+
+/* popup */
+.popup {
+  height: 480px;
+  width: 1000px;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border: 2px solid #fa9d83;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.popup .img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.popup img {
+  height: 100%;
+  width: 100%;
+}
+.foodinfo {
+  position: relative;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.popup .foodinfo .name {
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #fa9d83;
+}
+.popup button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background: red;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+.foodinfo .para {
+  padding-top: 5px;
+}
+.foodinfo .para span {
+  display: block;
+  padding: 5px 0;
+}
+.popup .headline {
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #feaa00;
+}
+
+.foodinfo::-webkit-scrollbar {
+  display: none;
+}
+.ingredient ul,
+.measure ul {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.foodinfo ul li {
+  list-style: circle;
+}
+.popup .source {
+  font-size: 22px;
+  text-transform: capitalize;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #ed0000;
+}
+.locate {
+  position: absolute;
+  bottom: 7%;
+  width: 50%;
+  /* width: 80%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: 600;
+}
+.type,
+.place {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.locate .type:hover,
+.locate .place:hover {
+  background: red;
+  color: white;
+}
+.locate span {
+  padding-left: 10px;
+  font-weight: 400;
+  color: black;
+}
+.locate {
+  color: red;
+}
+@media (max-width: 1200px) {
+  .popup {
+    width: 80%;
+  }
+}
+@media (max-width: 850px) {
+  .popup {
+    display: unset;
+    width: 80%;
+    overflow-y: scroll;
+  }
+  .popup::-webkit-scrollbar {
+    display: none;
+  }
+  .popup .img {
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .popup .locate {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .popup img {
+    border-radius: 10px;
+  }
+}
